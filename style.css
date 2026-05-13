@@ -573,3 +573,21 @@ footer h3 {
 
   line-height:28px;
 }
+@media (max-width: 768px) {
+  /* Mobile-specific changes go here */
+  body {
+    padding: 10px;
+  }
+  
+  /* Change multi-column structures to a single vertical column */
+  .container, .main-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Scale images so they do not spill over the edges */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
