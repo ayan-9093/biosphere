@@ -38,11 +38,9 @@ body {
   padding: 20px;
 }
 
-.overlay h1 {
-  font-size: 70px;
-  color: yellow;
+.overlay h1{
+  font-size:clamp(38px,8vw,70px);
 }
-
 .overlay p {
   margin-top: 20px;
   font-size: 24px;
@@ -126,7 +124,7 @@ button {
   text-align: center;
   color: yellow;
   margin-bottom: 40px;
-  font-size: 42px;
+  font-size:clamp(28px,6vw,42px);
 }
 
 .course-container {
@@ -157,7 +155,7 @@ button {
   text-align: center;
   color: yellow;
   margin-bottom: 40px;
-  font-size: 42px;
+  font-size:clamp(28px,6vw,42px);
 }
 
 .gallery-container {
@@ -184,7 +182,7 @@ button {
   text-align: center;
   color: yellow;
   margin-bottom: 40px;
-  font-size: 42px;
+  font-size:clamp(28px,6vw,42px);
 }
 
 .video-container {
@@ -209,7 +207,7 @@ button {
   text-align: center;
   color: yellow;
   margin-bottom: 40px;
-  font-size: 42px;
+  font-size:clamp(28px,6vw,42px);
 }
 
 .review-container {
@@ -236,7 +234,7 @@ button {
   text-align: center;
   color: yellow;
   margin-bottom: 40px;
-  font-size: 42px;
+  font-size:clamp(28px,6vw,42px);
 }
 
 .location-container {
@@ -261,7 +259,7 @@ button {
   text-align: center;
   color: yellow;
   margin-bottom: 40px;
-  font-size: 42px;
+  font-size:clamp(28px,6vw,42px);
 }
 
 form {
@@ -573,21 +571,143 @@ footer h3 {
 
   line-height:28px;
 }
-@media (max-width: 768px) {
-  /* Mobile-specific changes go here */
-  body {
-    padding: 10px;
-  }
-  
-  /* Change multi-column structures to a single vertical column */
-  .container, .main-layout {
-    display: flex;
-    flex-direction: column;
+/* =========================
+   MOBILE RESPONSIVE FIX
+========================= */
+
+@media (max-width:768px){
+
+  body{
+    overflow-x:hidden;
   }
 
-  /* Scale images so they do not spill over the edges */
-  img {
-    max-width: 100%;
-    height: auto;
+  /* HERO */
+
+  .hero{
+    height:90vh;
   }
+
+  .overlay h1{
+    font-size:38px;
+    line-height:50px;
+  }
+
+  .overlay p{
+    font-size:18px;
+    line-height:30px;
+  }
+
+  .buttons{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    align-items:center;
+  }
+
+  button{
+    width:90%;
+    max-width:300px;
+    font-size:16px;
+  }
+
+  /* SECTION PADDING */
+
+  .about,
+  .courses,
+  .gallery,
+  .videos,
+  .reviews,
+  .location,
+  .comments{
+    padding:50px 20px;
+  }
+
+  /* ABOUT SECTION */
+
+  .about{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .about img{
+    width:100%;
+    max-width:350px;
+  }
+
+  .about-text h2{
+    font-size:32px;
+  }
+
+  .stats{
+    flex-direction:column;
+  }
+
+  /* COURSES */
+
+  .course-container{
+    flex-direction:column;
+  }
+
+  /* REVIEWS */
+
+  .review-container{
+    flex-direction:column;
+  }
+
+  /* VIDEOS */
+
+  .video-container{
+    grid-template-columns:1fr;
+  }
+
+  .video-card iframe{
+    height:220px;
+  }
+
+  /* LOCATION */
+
+  .location-container{
+    flex-direction:column;
+  }
+
+  .location-container iframe{
+    width:100%;
+    height:300px;
+  }
+
+  /* GALLERY */
+
+  .gallery-container{
+    grid-template-columns:1fr;
+  }
+
+  /* HEADINGS */
+
+  .courses h2,
+  .gallery h2,
+  .videos h2,
+  .reviews h2,
+  .location h2,
+  .comments h2{
+    font-size:32px;
+  }
+
+  /* FORM */
+
+  input,
+  textarea{
+    font-size:16px;
+  }
+
+  /* IMAGE POPUP */
+
+  .image-popup img{
+    width:95%;
+  }
+
+  .close-image{
+    right:20px;
+    font-size:40px;
+  }
+
 }
